@@ -20,4 +20,6 @@ function setRandomMeme() {
 window.addEventListener('DOMContentLoaded', setRandomMeme);
 
 
+// Make h1 clickable to load a new meme
+document.querySelector('h1').addEventListener('click', setRandomMeme);
 
