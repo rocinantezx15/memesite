@@ -1,17 +1,17 @@
 body {
-    font-family: 'UnifrakturMaguntia', cursive; /* Gothic font */
-    background: linear-gradient(135deg, #000000, #2a0000); /* Dark gradient */
-    color: #ff0000; /* Blood red text */
+    font-family: 'UnifrakturMaguntia', cursive;
+    background: linear-gradient(135deg, #000000, #2a0000);
+    color: #cc2200;
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* No scrolling */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for gothic effect */
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -20,28 +20,41 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
+    color: #cc2200; /* dimmer red */
     animation: sprinkle 2s infinite;
 }
 
 @keyframes sprinkle {
     0%, 100% {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px #ff0000, 0 0 20px #ff0000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px #cc2200, 0 0 15px #cc2200;
     }
     50% {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 12px #cc2200, 0 0 25px #cc2200;
     }
 }
 
 .meme {
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    border: 5px solid #ff0000; /* Red border */
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 50, 0, 0.3); /* very subtle border */
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
     width: 80%;
     height: 60vh;
     max-width: 800px;
     max-height: 600px;
+    /* meme gets the spotlight now */
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.08),
+        0 0 60px rgba(255, 255, 255, 0.04),
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.meme:hover {
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.15),
+        0 0 80px rgba(255, 255, 255, 0.07),
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .meme img {
@@ -50,5 +63,5 @@ h1 {
     display: block;
     margin: 0 auto;
     border-radius: 5px;
-    object-fit: contain; /* Ensures image fits within the container without cropping */
+    object-fit: contain;
 }
