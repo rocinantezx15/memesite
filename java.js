@@ -33,4 +33,5 @@ window.addEventListener('popstate', (e) => {
 });
 
 window.addEventListener('DOMContentLoaded', setRandomMeme);
-document.querySelector('body').addEventListener('click', setRandomMeme);
+document.querySelector('h1').addEventListener('click', setRandomMeme);
+
