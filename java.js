@@ -22,7 +22,20 @@ function loadMeme(filename) {
     imgEl.src = `./images/${filename}`;
     imgEl.alt = `Meme ${filename}`;
 }
-
+function playBellSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(528, audioCtx.currentTime);
+    oscillator.frequency.exponentialRampToValueAtTime(220, audioCtx.currentTime + 2);
+    gainNode.gain.setValueAtTime(0.8, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 2.5);
+    oscillator.start(audioCtx.currentTime);
+    oscillator.stop(audioCtx.currentTime + 2.5);
+}
 // handles back/forward button
 window.addEventListener('popstate', (e) => {
     if (e.state && e.state.meme) {
@@ -33,5 +46,8 @@ window.addEventListener('popstate', (e) => {
 });
 
 window.addEventListener('DOMContentLoaded', setRandomMeme);
-document.querySelector('h1').addEventListener('click', setRandomMeme);
+document.querySelector('h1').addEventListener('click', () => {
+    playBellSound();
+    setRandomMeme();
+});
 
