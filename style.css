@@ -23,6 +23,23 @@ h1 {
     color: #cc2200; /* dimmer red */
     animation: sprinkle 2s infinite;
     cursor: pointer;
+    user-select: none; /* prevents text selection on click */
+    padding: 10px 25px;
+    border: 2px solid #cc2200;
+    border-radius: 8px;
+    background: rgba(204, 34, 0, 0.08);
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+h1:hover {
+    background: rgba(204, 34, 0, 0.18);
+    box-shadow: 0 0 15px rgba(204, 34, 0, 0.4);
+}
+
+h1:active {
+    transform: scale(0.97); /* slightly shrinks on click, feels like a real button press */
+    background: rgba(204, 34, 0, 0.3);
+    box-shadow: 0 0 8px rgba(204, 34, 0, 0.3);
 }
 
 @keyframes sprinkle {
