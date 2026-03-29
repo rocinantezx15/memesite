@@ -1,4 +1,4 @@
-const totalMemes = 709;
+const totalMemes = 705;
 
 function getRandomMemeFilename() {
     const n = Math.floor(Math.random() * totalMemes) + 1;
