@@ -12,7 +12,8 @@ body {
     align-items: center;
     overflow: hidden;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    cursor: url('./cursor.png'), auto;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23cc2200' stroke='%23000' stroke-width='1' d='M5,2 L5,18 L8,15 L11,21 L13,20 L10,14 L14,14 Z'/%3E%3C/svg%3E"), auto;
+
 }
 
 h1 {
@@ -23,7 +24,8 @@ h1 {
     text-align: center;
     color: #cc2200; /* dimmer red */
     animation: sprinkle 2s infinite;
-    cursor: pointer;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffd700' stroke='%23000' stroke-width='1' d='M8.5,2 C9.3,2 10,2.7 10,3.5 L10,10 C10.3,9.7 10.8,9.5 11.5,9.5 C12.2,9.5 12.8,9.9 13,10.5 C13.3,10.1 13.8,9.8 14.5,9.8 C15.2,9.8 15.8,10.2 16,10.8 C16.3,10.5 16.7,10.3 17,10.3 C17.8,10.3 18.5,11 18.5,11.8 L18.5,16 C18.5,19 16.5,21 13.5,21 L11,21 C9,21 7,19.5 6,17.5 L4,13 C3.7,12.3 4,11.3 4.8,11 C5.5,10.7 6.3,11 6.7,11.7 L8,14 L8,3.5 C8,2.7 8.7,2 8.5,2 Z'/%3E%3C/svg%3E"), pointer;
+
     user-select: none; /* prevents text selection on click */
     padding: 10px 25px;
     border: 2px solid #cc2200;
