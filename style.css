@@ -12,6 +12,7 @@ body {
     align-items: center;
     overflow: hidden;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    cursor: url('./cursor.png'), auto;
 }
 
 h1 {
