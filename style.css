@@ -65,3 +65,7 @@ h1 {
     border-radius: 5px;
     object-fit: contain;
 }
+h1 {
+    cursor: pointer;
+    /* rest of your existing h1 styles stay the same */
+}
