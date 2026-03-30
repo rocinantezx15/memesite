@@ -59,6 +59,17 @@ function playBellSound() {
     });
 }
 
+// background music that loops
+const bgMusic = new Audio('./sounds/chirping.wav');
+bgMusic.loop = true;
+bgMusic.volume = 0.3; // keep it low so it doesn't overpower
+
+// starts when user first interacts with page (browser requirement)
+document.addEventListener('click', function startMusic() {
+    bgMusic.play();
+    document.removeEventListener('click', startMusic); // only trigger once
+}, { once: true });
+
 window.addEventListener('popstate', (e) => {
     if (e.state && e.state.meme) {
         loadMeme(e.state.meme);
